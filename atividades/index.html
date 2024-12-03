@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividaes</title>
+
+    <style>
+        body{
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+
+    //Parte 7
+        function calularImposto(valor, porcentagem = 10){
+            console.log(valor * (porcentagem/100));
+        }
+
+        calularImposto(2000, 50); //1000  <- parametro escolhido
+        calularImposto(2000); // 200  <- parametro padrao
+
+
+        function cumprimentar(nome = 'você aí'){
+            if(nome){
+                console.log('Olá ' + nome);
+            }else{
+                console.log('Olá ' + nome);
+            }
+            
+        }
+
+        cumprimentar('thays')
+        cumprimentar()
+
+
+
+
+    </script>
+</head>
+<body>
+  
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
