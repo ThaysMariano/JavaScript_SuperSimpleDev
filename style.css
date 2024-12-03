@@ -1,0 +1,134 @@
+p {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  button {
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    font-size: 30px;
+    border-radius: 15px;
+    border: solid;
+  }
+
+  .botoes {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  .pedra {
+    /*background-image: url(img/pedra-bruta-1_xl.jpeg);*/
+    background-image: url("https://static.dicionariodesimbolos.com.br/upload/a0/a0/pedra-bruta-1_xl.jpeg");
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    cursor: pointer;
+    border: solid;
+    border-color: rgb(65, 65, 65);
+    border-width: 1px;
+  }
+
+  .papel {
+    /*background-image: url(img/images\ \(1\).jfif);*/
+    background-image: url("https://d3ehjh43zdjnv5.cloudfront.net/Custom/Content/Products/49/77/49771_papel-40kg-colorido-66x96cm-pr-19105-papel40kg3_m13_638265912648756935.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 90%;
+    cursor: pointer;
+    border: solid;
+    border-color: rgb(65, 65, 65);
+    border-width: 1px;
+  }
+
+  .tesoura {
+    /*background-image: url(img/images\ \(2\).jfif);*/
+    background-image: url("https://lojaalfa.com/image/cache/catalog/bling/tesoura-zig-zag-papel-tecido-couro-profissional-masterprint0-1200x1200.jpg");
+    background-position-x: center;
+    background-position-y: 43%;
+    background-size: 90%;
+    cursor: pointer;
+    border: solid;
+    border-color: rgb(65, 65, 65);
+    border-width: 1px;
+  }
+
+  body {
+    background-color: rgb(197, 217, 255);
+  }
+
+  .paiTexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+
+  .paiBotoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1vh;
+  }
+
+  .paiNomes {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .paiPontuacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+
+  .texto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(247, 247, 247);
+    width: 650px;
+    border-radius: 40px;
+    border: solid;
+    border-color: rgb(95, 95, 95);
+    border-width: 1px;
+  }
+
+  .nomes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 650px;
+  }
+
+  .item {
+    font-size: 25px;
+  }
+
+  .pontuacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 650px;
+    height: 70px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 25px;
+    border: solid;
+    border-color: rgb(95, 95, 95);
+    border-width: 1px;
+    
+    
+  }
+
+    .ponto{
+      font-size: 30px;
+    }
+ 
+  
