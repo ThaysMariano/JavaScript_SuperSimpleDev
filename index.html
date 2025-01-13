@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Jogo Pedra Papel Tesoura</title>
+  <link rel="stylesheet" href="jogo/style.css">
+  <script src="/jogo/script.js"></script>
+
+</head>
+
+<body>
+  <script>
+
+    //objeto
+    let pontuacao = JSON.parse(localStorage.getItem('pontuacao')) || 
+    {
+        vitorias: 0,
+        derrotas: 0,
+        empates: 0,
+      };
+
+    
+
+    //funcoes
+
+    function escolherMovimentoComputador() {
+
+      const numeroAleatorio3 = Math.random();
+
+      let movimentoComputador = ' ';
+      if (numeroAleatorio3 >= 0 && numeroAleatorio3 < 1 / 3) {
+        movimentoComputador = 'pedra';
+      }
+      else if (numeroAleatorio3 >= 1 / 3 && numeroAleatorio3 < 2 / 3) {
+        movimentoComputador = 'papel';
+      }
+      else {
+        movimentoComputador = 'tesoura';
+      }
+
+      return movimentoComputador;
+    }
+
+    function resultadoJogo(movimentoJogador) {
+
+      movimentoComputador = escolherMovimentoComputador();
+
+      let resultado = ' ';
+      if (movimentoJogador === 'tesoura') {
+        if (movimentoComputador === 'pedra') {
+          resultado = 'Voce perdeu!';
+        }
+        else if (movimentoComputador === 'papel') {
+          resultado = 'Voce ganhou!'
+        }
+        else {
+          resultado = 'Empate!'
+
+        }
+      }
+
+      else if (movimentoJogador === 'pedra') {
+        if (movimentoComputador === 'pedra') {
+          resultado = 'Empate!';
+
+        }
+        else if (movimentoComputador === 'papel') {
+          resultado = 'Voce perdeu!'
+
+        }
+        else {
+          resultado = 'Voce ganhou!'
+
+        }
+      }
+
+      else {
+        if (movimentoComputador === 'pedra') {
+          resultado = 'Voce ganhou!';
+
+        }
+        else if (movimentoComputador === 'papel') {
+          resultado = 'Empate!'
+
+        }
+        else {
+          resultado = 'Voce perdeu!'
+
+        }
+      }
+      if (resultado === 'Voce ganhou!') {
+        pontuacao.vitorias++
+      } else if (resultado === 'Voce perdeu!') {
+        pontuacao.derrotas++
+      } else {
+        pontuacao.empates++
+      }
+
+      localStorage.setItem('pontuacao', JSON.stringify(pontuacao));
+
+
+      return alert(`Voce escolheu ${movimentoJogador}. O computador escolheu ${movimentoComputador}. ${resultado}
+  vitorias: ${pontuacao.vitorias}, derrotas: ${pontuacao.derrotas}, empates: ${pontuacao.empates}`);
+    }
+
+  </script>
+  
+  <div class="paiTexto">
+    <div class="texto">
+      <p>Escolha: Pedra, Papel ou Tesoura?</p>
+    </div>
+  </div>
+  <div class="paiBotoes">
+    <div class="botoes">
+      <button class="pedra" onclick="
+        resultadoJogo('pedra');
+
+      "> </button>
+
+      <button class="papel" onclick="
+        resultadoJogo( 'papel');
+      
+      "></button>
+
+      <button class="tesoura" onclick="
+         resultadoJogo('tesoura');
+      
+      "></button>
+
+
+    </div>
+  </div>
+  <div class="paiNomes">
+    <div class="nomes">
+      <p class="item">Pedra</p>
+      <p class="item">Papel</p>
+      <p class="item">Tesoura</p>
+      <p class="item"></p>
+    </div>
+  </div>
+  </div>
+  <div class="paiPontuacao">
+    <div class="pontuacao">
+      <p class="ponto">Vitorias: </p>
+      <p class="ponto">Derrotas: </p>
+      <p class="ponto">Empates: </p>
+
+      <button class="reiniciar" onclick="
+      pontuacao.vitorias=0;
+      pontuacao.derrotas=0;
+      pontuacao.empates=0;
+      localStorage.removeItem('pontuacao');
+      "></button>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

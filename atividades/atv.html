@@ -34,6 +34,40 @@
         cumprimentar()
 
 
+        // Parte 8 JSON
+
+        const produto1 = {
+            nome: 'Chinelo',
+            preco: '32',
+            avaliacao: {
+                estrelas: '4,1',
+                comentarios: 12
+            },
+            fun: function funcao1() {
+                console.log(2+2)
+            },
+        }
+
+        console.log(produto1);
+        console.log(produto1.nome);
+        console.log(produto1.avaliacao.estrelas);
+        produto1.fun();
+
+        // trsnf em JSON
+        console.log(JSON.stringify(produto1));  //JSON nao suporta funcoes
+
+        const jsonString = JSON.stringify(produto1);
+
+        //Desfazer JSON
+        console.log(JSON.parse(jsonString));
+
+
+        
+
+
+
+
+
 
 
     </script>
