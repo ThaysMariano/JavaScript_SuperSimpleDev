@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#botaoVermelho{
+    background-color: red;
+    height: 70px;
+    width: 100px;
+    border: 1px solid black;
+    
+}
+
+#botaoVerde{
+    background-color: rgb(43, 255, 0);
+    height: 70px;
+    width: 100px;
+    border: 1px solid black;
+    
+}
+
+#botaoRoxo{
+    background-color: rgb(187, 0, 255);
+    height: 70px;
+    width: 100px;
+    border: 1px solid black;
+    
+}
+
+#botaoAmarelo{
+    background-color: rgb(208, 255, 0);
+    height: 70px;
+    width: 100px;
+    border: 1px solid black;
+    
+}
